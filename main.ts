@@ -1,14 +1,16 @@
 import "phaser";
-import { GameScene } from "./scenes/gameScene";
+import { config } from './config';
+import * as SCENES from './constants/scenes.const';
+import { GameScene } from "./scenes/game.scene";
 
-const config: Phaser.Types.Core.GameConfig = {
-  width: 800,
-  height: 600,
-  type: Phaser.AUTO,
-  parent: "game",
-  scene: GameScene
-};
+class Game extends Phaser.Game {
+  constructor() {
+    super(config);
+    this.scene.add(SCENES.GAME, GameScene);
+    this.scene.start(SCENES.GAME);
+  }
+}
 
 window.addEventListener("load", () => {
-  const game = new Phaser.Game(config);
+  const game = new Game();
 });

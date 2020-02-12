@@ -1,10 +1,10 @@
+import * as SCENES from '../constants/scenes.const';
+
 export class GameScene extends Phaser.Scene {
   private phaserSprite: Phaser.GameObjects.Sprite;
 
   constructor() {
-    super({
-      key: "GameScene"
-    });
+    super({key: SCENES.GAME});
   }
 
   preload(): void {
@@ -16,6 +16,6 @@ export class GameScene extends Phaser.Scene {
   }
 
   update(): void {
-    
+
   }
 }
