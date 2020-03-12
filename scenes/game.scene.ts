@@ -7,15 +7,17 @@ export class GameScene extends Phaser.Scene {
     super({key: SCENES.GAME});
   }
 
-  preload(): void {
+  init() {
+  }
+
+  preload() {
     //this.load.image("myImage", "../assets/phaser.png");
   }
 
-  create(): void {
+  create() {
     //phaserSprite = this.add.sprite(400, 300, "myImage");
   }
 
-  update(): void {
-
+  update() {
   }
 }
