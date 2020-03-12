@@ -1,5 +1,5 @@
 import "phaser";
-import { config } from './config';
+import { config } from './configs/config';
 import * as SCENES from './constants/scenes.const';
 import { GameScene } from "./scenes/game.scene";
 
